@@ -9,7 +9,7 @@ class App extends Component {
 		return (
 			<div className="catch-of-the-day">
 				<div className="menu">
-					<Header />
+					<Header tagline="Fresh SeaFood Market" />
 				</div>
 				<Order />
 				<Inventory />
