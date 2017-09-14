@@ -4,6 +4,8 @@ import Header from './Header';
 import Order from './Order';
 import Inventory from './Inventory';
 
+import sampleFishes from '../sample-fishes';
+
 class App extends Component {
 	// Initial State
 	state = {
@@ -21,6 +23,12 @@ class App extends Component {
 		this.setState({ fishes });
 	};
 
+	loadSamples = () => {
+		this.setState({
+			fishes: sampleFishes,
+		});
+	};
+
 	render() {
 		return (
 			<div className="catch-of-the-day">
@@ -28,7 +36,7 @@ class App extends Component {
 					<Header tagline="Fresh SeaFood Market" />
 				</div>
 				<Order />
-				<Inventory addFish={this.addFish} />
+				<Inventory addFish={this.addFish} loadSamples={this.loadSamples} />
 			</div>
 		);
 	}
