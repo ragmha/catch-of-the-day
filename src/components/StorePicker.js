@@ -4,7 +4,6 @@ import { getFunName } from '../helpers';
 class StorePicker extends Component {
 	goToStore = event => {
 		event.preventDefault();
-		console.log('You Changed the URL!');
 		// grab the text from the box
 		const storeId = this.storeInput.value;
 		// Transition from / to /store/:storeId
