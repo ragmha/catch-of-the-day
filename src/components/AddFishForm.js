@@ -14,6 +14,7 @@ class AddFishForm extends Component {
 		this.props.addFish(fish);
 		this.fishForm.reset();
 	};
+
 	render() {
 		return (
 			<form ref={input => (this.fishForm = input)} className="fish-edit" onSubmit={this.createFish}>
